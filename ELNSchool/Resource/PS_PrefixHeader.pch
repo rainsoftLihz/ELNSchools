@@ -1,0 +1,54 @@
+//
+//  PS_PrefixHeader.pch
+//  PacificSchool
+//
+//  Created by rainsoft on 2019/4/9.
+//  Copyright © 2019年 jzt. All rights reserved.
+//
+
+#ifndef PS_PrefixHeader_pch
+#define PS_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "PSBaseViewController.h"
+
+#import "Utils.h"
+
+#import "UIView+JZTCateGory.h"
+
+#import <Masonry/Masonry.h>
+
+#import <SDWebImage/UIImage+GIF.h>
+#import <SDWebImage/UIImageView+WebCache.h>
+
+#import <AFNetworking/AFNetworking.h>
+
+#import <QMUIKit/QMUIKit.h>
+
+#import "PSMacroUtils.h"
+
+#import "UIResponder+Adapt.h"
+
+//绘制背景色
+#import "UIView+Gradient.h"
+
+#import <SVProgressHUD/SVProgressHUD.h>
+
+#import "NSObject+YYModel.h"
+#import "NSObject+HKModel.h"
+
+#import <SDCycleScrollView/SDCycleScrollView.h>
+
+#import <ZFPlayer/ZFPlayer.h>
+
+#import "LHZRouterManager.h"
+#import "LHZPlayerManger.h"
+#import "LHZDownLoader.h"
+#import "LHZDownLoaderManager.h"
+#import "LHZLoadingManager.h"
+
+
+
+#endif /* PS_PrefixHeader_pch */
