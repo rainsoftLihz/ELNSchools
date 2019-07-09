@@ -10,6 +10,13 @@
 
 @implementation PSProgressView
 
+-(instancetype)initWithFrame:(CGRect)frame{
+    if (self = [super initWithFrame:frame]) {
+        
+    }
+    return self;
+}
+
 - (void)drawRect:(CGRect)rect {
     // 仪表盘底部
     drawFront();
@@ -32,9 +39,12 @@
     [[UIColor colorWithRed:248.f/250 green:212.f/250.f blue:74.f/250.f alpha:1] set];
 
     
-    
-    CGFloat end = -5*M_PI_4+(6*M_PI_4*_num/_countNum);
-    CGContextAddArc(ctx, KScreenWidth/2 , 150/2, 50, -5*M_PI_4, end , 0);
+    /*
+    CGContextRef  _Nullable c, CGFloat x, CGFloat y, CGFloat radius, CGFloat startAngle, CGFloat endAngle, int clockwise)
+    x,y为圆点坐标，radius半径，startAngle为开始的弧度，endAngle为 结束的弧度，clockwise 0为顺时针，1为逆时针
+    */
+    CGFloat end = -3.5*M_PI_4+(3*M_PI_4*_num/_countNum);
+    CGContextAddArc(ctx, KScreenWidth/2 , 250/2, 100, -3.5*M_PI_4, end , 0);
     //3.绘制
     CGContextStrokePath(ctx);
     
@@ -55,7 +65,7 @@ void drawFront()
     [[UIColor colorWithRed:118.f/250.f green:224.f/250.f blue:248.f/250.f alpha:1] set];
 
     //2.设置路径
-    CGContextAddArc(ctx, KScreenWidth/2 , 150/2, 50, -5*M_PI_4, M_PI_4, 0);
+    CGContextAddArc(ctx, KScreenWidth/2 , 250/2, 100, -3.5*M_PI_4, -0.5*M_PI_4, 0);
     //3.绘制
     CGContextStrokePath(ctx);
     

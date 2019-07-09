@@ -92,7 +92,7 @@
     [PSLoginAPI weChatLoginWith:[response modelToJSONObject] Success:^(NSURLSessionDataTask *task, id response) {
         
     } faile:^(NSURLSessionDataTask *task, NSError *error) {
-        
+        [LHZLoadingManager  showTipsError:@"微信登录失败"];
     }];
 }
 

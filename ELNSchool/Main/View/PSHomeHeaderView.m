@@ -35,14 +35,15 @@
 
 - (void)setUpUIwiht:(PSHomeModel*)model{
     _countTimeLabel.text = [NSString stringWithFormat:@"学习目标时长%@分钟",model.aimStudyTime];
-    _titllLabel.text = [NSString stringWithFormat:@"%ld",(long)model.hasStudyTime];
+    _titllLabel.text = [NSString stringWithFormat:@"%ld",(long)model.hasStudyTime+100];
     _punchCardLabel.text = [NSString stringWithFormat:@"%ld\n累计打卡",(long)model.signTotalCount];
     _getNumberLabel.text = [NSString stringWithFormat:@"%ld\n已获学豆",(long)model.totalCoin];
     
     
     [self addSubview:self.progressView];
-    _progressView.num = 30;//model.hasStudyTime;
+    _progressView.num = 0;//model.hasStudyTime;
     _progressView.countNum = 55;//[model.aimStudyTime intValue];
+    _progressView.numLabel.text = @"111";
     
 }
 

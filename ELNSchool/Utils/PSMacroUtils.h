@@ -42,9 +42,17 @@ NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];       \
 //设备的宽度
 #define KScreenWidth [[UIScreen mainScreen] bounds].size.width
 //ISIphoneX
-#define ISIphoneX ([[UIApplication sharedApplication]statusBarFrame].size.height == 44)
-#define StatusBarH ([[UIApplication sharedApplication]statusBarFrame].size.height)
-#define SafeBottomArea (ISIphoneX?34:0)
+#define kISIphoneX ([[UIApplication sharedApplication]statusBarFrame].size.height == 44)
+
+#define kStatusBarH ([[UIApplication sharedApplication]statusBarFrame].size.height)
+
+
+#define kNavBarAndStatusBarHeight (CGFloat)(kISIphoneX?(88.0):(64.0))
+
+
+#define kTabBarHeight (CGFloat)(kISIphoneX?(49.0 + 34.0):(49.0))
+
+#define kSafeBottomArea (ISIphoneX?34:0)
 
 
 #pragma mark - 颜色类

@@ -38,10 +38,11 @@
 #pragma mark  --- 是否已经登录过
 +(BOOL)isLogin{
     PSFrontPartner* frontUser = [PSLoginManager frontUser];
-    if (frontUser && frontUser.frontUserId) {
-        return YES;
-    }
-    return NO;
+    return YES;
+//    if (frontUser && frontUser.frontUserId) {
+//        return YES;
+//    }
+//    return NO;
 }
 
 @end
