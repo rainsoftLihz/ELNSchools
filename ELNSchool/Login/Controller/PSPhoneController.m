@@ -23,7 +23,7 @@
     [self configHeaderWith:@"请输入您的手机号"];
     [self configBottomActionBtnWithTitle:@"下一步"];
     
-    WeakSelf;
+    kWeakSelf;
     PSLoginBaseView* phoneView = [[PSLoginBaseView alloc] initWithFrame:CGRectMake(0, [self contentSpace], KScreenWidth, 49.0) andIcon:@"Phone" andPlacehold:@"请输入手机号" andBlock:^(NSString * phoneStr) {
         
         [PSLoginManager manager].mobile = phoneStr;

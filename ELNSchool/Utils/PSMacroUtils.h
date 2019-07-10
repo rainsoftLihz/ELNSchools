@@ -26,7 +26,7 @@ NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];       \
 [defaults synchronize];                                                  \
 })
 
-#define WeakSelf __weak typeof(self) wkSelf = self;
+#define kWeakSelf __weak typeof(self) wkSelf = self;
 
 
 #pragma mark - 屏幕相关
@@ -52,7 +52,7 @@ NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];       \
 
 #define kTabBarHeight (CGFloat)(kISIphoneX?(49.0 + 34.0):(49.0))
 
-#define kSafeBottomArea (ISIphoneX?34:0)
+#define kSafeBottomArea (kISIphoneX?34:0)
 
 
 #pragma mark - 颜色类
@@ -61,5 +61,14 @@ NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];       \
 
 
 #define kMainColor UIColorFromRGB(0x007ED9)
+
+#define kFontSize(size) [UIFont systemFontOfSize:size]
+#define kFontBoldSize(size) [UIFont boldSystemFontOfSize:size]
+
+#define kUIImage(name) [UIImage imageNamed:name]
+
+
+/// 微信支付通知
+#define WX_PAY_NOTIFICATION @"WX_PAY_NOTIFICATION"
 
 #endif /* PSMacroUtils_h */

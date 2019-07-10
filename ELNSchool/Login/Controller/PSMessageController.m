@@ -21,7 +21,7 @@
     
     [self configHeaderWith:@"请输入短信验证码"];
     
-    WeakSelf;
+    kWeakSelf;
     PSInPutCodeView* psView = [[PSInPutCodeView alloc] initWithFrame:CGRectMake(0, [self contentSpace], KScreenWidth, 49) andCount:4 andSpace:8 codeBlock:^(NSString * code) {
         NSLog(@"code === %@",code);
         wkSelf.inputCode = code;

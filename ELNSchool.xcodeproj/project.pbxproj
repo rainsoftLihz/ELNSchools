@@ -95,6 +95,16 @@
 		5349A63B22C20517004AC9D6 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5349A63A22C20517004AC9D6 /* libsqlite3.tbd */; };
 		534EAC36225CCD8A00A3A2D6 /* PSGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 534EAC34225CCD8900A3A2D6 /* PSGradientLayer.m */; };
 		534EAC39225CCD9400A3A2D6 /* UIView+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 534EAC38225CCD9400A3A2D6 /* UIView+Gradient.m */; };
+		537C37A722D5878400CFC22C /* PSCourseDetailVController.m in Sources */ = {isa = PBXBuildFile; fileRef = 537C37A622D5878400CFC22C /* PSCourseDetailVController.m */; };
+		537C37AA22D597D100CFC22C /* PSBuyToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 537C37A922D597D100CFC22C /* PSBuyToolView.m */; };
+		537C37AD22D5A1E400CFC22C /* PSKCBTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 537C37AC22D5A1E400CFC22C /* PSKCBTableCell.m */; };
+		537C37B022D5BD4200CFC22C /* PSShowBuyVController.m in Sources */ = {isa = PBXBuildFile; fileRef = 537C37AF22D5BD4200CFC22C /* PSShowBuyVController.m */; };
+		537C37B422D5C61500CFC22C /* LHZUIbutton.m in Sources */ = {isa = PBXBuildFile; fileRef = 537C37B322D5C61500CFC22C /* LHZUIbutton.m */; };
+		537C37B822D5D40000CFC22C /* PSPriceInfoTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 537C37B622D5D40000CFC22C /* PSPriceInfoTableCell.m */; };
+		537C37B922D5D40000CFC22C /* PSPriceInfoTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 537C37B722D5D40000CFC22C /* PSPriceInfoTableCell.xib */; };
+		537C37BD22D5E33400CFC22C /* JZTPayCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 537C37BB22D5E33400CFC22C /* JZTPayCenter.m */; };
+		537C37C022D5E35A00CFC22C /* JZTPayResp.m in Sources */ = {isa = PBXBuildFile; fileRef = 537C37BF22D5E35900CFC22C /* JZTPayResp.m */; };
+		537C37C322D5E51500CFC22C /* PSPayApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 537C37C222D5E51500CFC22C /* PSPayApi.m */; };
 		53991CC422B379FB007AB52F /* LHZPlayerManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 53991CC322B379FB007AB52F /* LHZPlayerManger.m */; };
 		53991CC722B383A6007AB52F /* LHZPlayerResourceLoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 53991CC622B383A6007AB52F /* LHZPlayerResourceLoder.m */; };
 		53991CCB22B39CF5007AB52F /* LHZDownLoaderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 53991CCA22B39CF5007AB52F /* LHZDownLoaderManager.m */; };
@@ -104,6 +114,7 @@
 		53A4EEC322A9017400F101D4 /* PSPhoneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A4EEC222A9017400F101D4 /* PSPhoneController.m */; };
 		53A4EEC422A903FE00F101D4 /* PSLoginBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53FD3A5522A8F4C900E8A9FD /* PSLoginBaseView.m */; };
 		53A4EEC722A91B2800F101D4 /* PSFrontPartner.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A4EEC622A91B2800F101D4 /* PSFrontPartner.m */; };
+		53BE1D0722D48253004BFE60 /* PSSocialTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53BE1D0622D48253004BFE60 /* PSSocialTableCell.m */; };
 		53D105A722B09F7000B8E03F /* PSBaseVideoVController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53D105A622B09F7000B8E03F /* PSBaseVideoVController.m */; };
 		53D105AA22B09F8B00B8E03F /* PSBaseWebVController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53D105A922B09F8B00B8E03F /* PSBaseWebVController.m */; };
 		53D105B022B0EAA200B8E03F /* PSDocmentPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53D105AF22B0EAA200B8E03F /* PSDocmentPreviewController.m */; };
@@ -305,6 +316,25 @@
 		534EAC35225CCD8A00A3A2D6 /* PSGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSGradientLayer.h; sourceTree = "<group>"; };
 		534EAC37225CCD9400A3A2D6 /* UIView+Gradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Gradient.h"; sourceTree = "<group>"; };
 		534EAC38225CCD9400A3A2D6 /* UIView+Gradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Gradient.m"; sourceTree = "<group>"; };
+		537C37A522D5878400CFC22C /* PSCourseDetailVController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSCourseDetailVController.h; sourceTree = "<group>"; };
+		537C37A622D5878400CFC22C /* PSCourseDetailVController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSCourseDetailVController.m; sourceTree = "<group>"; };
+		537C37A822D597D100CFC22C /* PSBuyToolView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSBuyToolView.h; sourceTree = "<group>"; };
+		537C37A922D597D100CFC22C /* PSBuyToolView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSBuyToolView.m; sourceTree = "<group>"; };
+		537C37AB22D5A1E400CFC22C /* PSKCBTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSKCBTableCell.h; sourceTree = "<group>"; };
+		537C37AC22D5A1E400CFC22C /* PSKCBTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSKCBTableCell.m; sourceTree = "<group>"; };
+		537C37AE22D5BD4200CFC22C /* PSShowBuyVController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSShowBuyVController.h; sourceTree = "<group>"; };
+		537C37AF22D5BD4200CFC22C /* PSShowBuyVController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSShowBuyVController.m; sourceTree = "<group>"; };
+		537C37B222D5C61500CFC22C /* LHZUIbutton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHZUIbutton.h; sourceTree = "<group>"; };
+		537C37B322D5C61500CFC22C /* LHZUIbutton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHZUIbutton.m; sourceTree = "<group>"; };
+		537C37B522D5D40000CFC22C /* PSPriceInfoTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSPriceInfoTableCell.h; sourceTree = "<group>"; };
+		537C37B622D5D40000CFC22C /* PSPriceInfoTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSPriceInfoTableCell.m; sourceTree = "<group>"; };
+		537C37B722D5D40000CFC22C /* PSPriceInfoTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PSPriceInfoTableCell.xib; sourceTree = "<group>"; };
+		537C37BB22D5E33400CFC22C /* JZTPayCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZTPayCenter.m; sourceTree = "<group>"; };
+		537C37BC22D5E33400CFC22C /* JZTPayCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZTPayCenter.h; sourceTree = "<group>"; };
+		537C37BE22D5E35900CFC22C /* JZTPayResp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZTPayResp.h; sourceTree = "<group>"; };
+		537C37BF22D5E35900CFC22C /* JZTPayResp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZTPayResp.m; sourceTree = "<group>"; };
+		537C37C122D5E51500CFC22C /* PSPayApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSPayApi.h; sourceTree = "<group>"; };
+		537C37C222D5E51500CFC22C /* PSPayApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSPayApi.m; sourceTree = "<group>"; };
 		53991CC222B379FB007AB52F /* LHZPlayerManger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHZPlayerManger.h; sourceTree = "<group>"; };
 		53991CC322B379FB007AB52F /* LHZPlayerManger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHZPlayerManger.m; sourceTree = "<group>"; };
 		53991CC522B383A6007AB52F /* LHZPlayerResourceLoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHZPlayerResourceLoder.h; sourceTree = "<group>"; };
@@ -321,6 +351,8 @@
 		53A4EEC222A9017400F101D4 /* PSPhoneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSPhoneController.m; sourceTree = "<group>"; };
 		53A4EEC522A91B2800F101D4 /* PSFrontPartner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSFrontPartner.h; sourceTree = "<group>"; };
 		53A4EEC622A91B2800F101D4 /* PSFrontPartner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSFrontPartner.m; sourceTree = "<group>"; };
+		53BE1D0522D48253004BFE60 /* PSSocialTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSSocialTableCell.h; sourceTree = "<group>"; };
+		53BE1D0622D48253004BFE60 /* PSSocialTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSSocialTableCell.m; sourceTree = "<group>"; };
 		53D105A522B09F7000B8E03F /* PSBaseVideoVController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSBaseVideoVController.h; sourceTree = "<group>"; };
 		53D105A622B09F7000B8E03F /* PSBaseVideoVController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSBaseVideoVController.m; sourceTree = "<group>"; };
 		53D105A822B09F8B00B8E03F /* PSBaseWebVController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSBaseWebVController.h; sourceTree = "<group>"; };
@@ -534,6 +566,7 @@
 		5335DA9B225B83D200183509 /* ELNSchool */ = {
 			isa = PBXGroup;
 			children = (
+				537C37BA22D5E2C100CFC22C /* PayCenter */,
 				53D105B522B1042700B8E03F /* Resource */,
 				533F76AC22A76BEA006DA05C /* Login */,
 				53D9E978225C94AC00029C7F /* Tools */,
@@ -609,6 +642,8 @@
 			children = (
 				533804FD225C29FE0060E743 /* PSCollegeVController.h */,
 				533804FE225C29FE0060E743 /* PSCollegeVController.m */,
+				53BE1D0522D48253004BFE60 /* PSSocialTableCell.h */,
+				53BE1D0622D48253004BFE60 /* PSSocialTableCell.m */,
 			);
 			path = College;
 			sourceTree = "<group>";
@@ -656,6 +691,7 @@
 		53380609225C2CF80060E743 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				537C37B122D5C5D100CFC22C /* UI */,
 				53991CC822B39CBF007AB52F /* DownLoader */,
 				53D105A422B09F4900B8E03F /* Base */,
 				53AB737122ADFD8C00B6BF94 /* Loding */,
@@ -704,6 +740,28 @@
 				53FD3A5522A8F4C900E8A9FD /* PSLoginBaseView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		537C37B122D5C5D100CFC22C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				537C37B222D5C61500CFC22C /* LHZUIbutton.h */,
+				537C37B322D5C61500CFC22C /* LHZUIbutton.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		537C37BA22D5E2C100CFC22C /* PayCenter */ = {
+			isa = PBXGroup;
+			children = (
+				537C37BE22D5E35900CFC22C /* JZTPayResp.h */,
+				537C37BF22D5E35900CFC22C /* JZTPayResp.m */,
+				537C37BC22D5E33400CFC22C /* JZTPayCenter.h */,
+				537C37BB22D5E33400CFC22C /* JZTPayCenter.m */,
+				537C37C122D5E51500CFC22C /* PSPayApi.h */,
+				537C37C222D5E51500CFC22C /* PSPayApi.m */,
+			);
+			path = PayCenter;
 			sourceTree = "<group>";
 		};
 		53991CC822B39CBF007AB52F /* DownLoader */ = {
@@ -778,6 +836,13 @@
 				5312283822D32AE70036E8A5 /* PSHomeTableCell3.h */,
 				5312283922D32AE70036E8A5 /* PSHomeTableCell3.m */,
 				5312283A22D32AE70036E8A5 /* PSHomeTableCell3.xib */,
+				537C37A822D597D100CFC22C /* PSBuyToolView.h */,
+				537C37A922D597D100CFC22C /* PSBuyToolView.m */,
+				537C37AB22D5A1E400CFC22C /* PSKCBTableCell.h */,
+				537C37AC22D5A1E400CFC22C /* PSKCBTableCell.m */,
+				537C37B522D5D40000CFC22C /* PSPriceInfoTableCell.h */,
+				537C37B622D5D40000CFC22C /* PSPriceInfoTableCell.m */,
+				537C37B722D5D40000CFC22C /* PSPriceInfoTableCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -788,6 +853,10 @@
 				5312280E22D319C00036E8A5 /* wd_dd_gh.png */,
 				53380606225C2BB30060E743 /* PSMainVController.h */,
 				53380607225C2BB30060E743 /* PSMainVController.m */,
+				537C37A522D5878400CFC22C /* PSCourseDetailVController.h */,
+				537C37A622D5878400CFC22C /* PSCourseDetailVController.m */,
+				537C37AE22D5BD4200CFC22C /* PSShowBuyVController.h */,
+				537C37AF22D5BD4200CFC22C /* PSShowBuyVController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -947,6 +1016,7 @@
 			files = (
 				5312283C22D32AE70036E8A5 /* PSHomeTableCell3.xib in Resources */,
 				5312280F22D319C00036E8A5 /* wd_dd_gh.png in Resources */,
+				537C37B922D5D40000CFC22C /* PSPriceInfoTableCell.xib in Resources */,
 				5335DAA9225B83D400183509 /* LaunchScreen.storyboard in Resources */,
 				5335DAA6225B83D400183509 /* Assets.xcassets in Resources */,
 			);
@@ -1013,6 +1083,7 @@
 				531228A422D34B100036E8A5 /* NSDate+HXExtension.m in Sources */,
 				5312289A22D34B100036E8A5 /* HXDatePhotoPreviewViewController.m in Sources */,
 				53D9E98F225C9D5A00029C7F /* XTCourseExamModel.m in Sources */,
+				53BE1D0722D48253004BFE60 /* PSSocialTableCell.m in Sources */,
 				53FD3A5022A8F26D00E8A9FD /* PSMessageController.m in Sources */,
 				539F174522B3C45800842153 /* NSString+LHZDownLoader.m in Sources */,
 				5312280D22D319840036E8A5 /* CollectionViewCell.m in Sources */,
@@ -1026,10 +1097,15 @@
 				531228AC22D34B100036E8A5 /* HXDateVideoEditViewController.m in Sources */,
 				533F76E622A7754F006DA05C /* NSDate+MJ.m in Sources */,
 				531228AD22D34B100036E8A5 /* HXDatePhotoToolManager.m in Sources */,
+				537C37AA22D597D100CFC22C /* PSBuyToolView.m in Sources */,
+				537C37B022D5BD4200CFC22C /* PSShowBuyVController.m in Sources */,
 				533804F3225C28E80060E743 /* PSBaseViewController.m in Sources */,
 				53E94DDE22CB078000E995B3 /* AppDelegate+Umeng.m in Sources */,
+				537C37AD22D5A1E400CFC22C /* PSKCBTableCell.m in Sources */,
+				537C37C322D5E51500CFC22C /* PSPayApi.m in Sources */,
 				53D9E995225CA5E000029C7F /* PSHomeVM.m in Sources */,
 				531228AA22D34B100036E8A5 /* HXCustomPreviewView.m in Sources */,
+				537C37A722D5878400CFC22C /* PSCourseDetailVController.m in Sources */,
 				53D9E97B225C94C800029C7F /* PSTools.m in Sources */,
 				53D105A722B09F7000B8E03F /* PSBaseVideoVController.m in Sources */,
 				5335DAAC225B83D400183509 /* main.m in Sources */,
@@ -1060,6 +1136,7 @@
 				53FD3A4822A8F02200E8A9FD /* PSLoginBaseVC.m in Sources */,
 				5349A60D22C1CD25004AC9D6 /* PSTestViewController.m in Sources */,
 				5312289022D34B100036E8A5 /* NSBundle+HXWeiboPhotoPicker.m in Sources */,
+				537C37C022D5E35A00CFC22C /* JZTPayResp.m in Sources */,
 				531228A122D34B100036E8A5 /* HXCustomCollectionReusableView.m in Sources */,
 				5312289C22D34B100036E8A5 /* HXDatePhotoViewController.m in Sources */,
 				5312288D22D34B100036E8A5 /* HXDownloadProgressView.m in Sources */,
@@ -1089,9 +1166,11 @@
 				5312283B22D32AE70036E8A5 /* PSHomeTableCell3.m in Sources */,
 				533F76EA22A7754F006DA05C /* Reachability.m in Sources */,
 				5312289522D34B100036E8A5 /* HXPhotoModel.m in Sources */,
+				537C37B822D5D40000CFC22C /* PSPriceInfoTableCell.m in Sources */,
 				53FD3A3E22A8AA7500E8A9FD /* PSInPutCodeView.m in Sources */,
 				531228B422D34C0A0036E8A5 /* UIImage+Extent.m in Sources */,
 				53D9E98E225C9D5A00029C7F /* PSCourseModel.m in Sources */,
+				537C37B422D5C61500CFC22C /* LHZUIbutton.m in Sources */,
 				53D9E977225C938900029C7F /* PSProgressView.m in Sources */,
 				53380608225C2BB30060E743 /* PSMainVController.m in Sources */,
 				531228A722D34B100036E8A5 /* HXPhotoSubViewCell.m in Sources */,
@@ -1099,6 +1178,7 @@
 				531228AB22D34B100036E8A5 /* HXCircleProgressView.m in Sources */,
 				5312289322D34B100036E8A5 /* UIFont+HXExtension.m in Sources */,
 				533804FF225C29FE0060E743 /* PSCollegeVController.m in Sources */,
+				537C37BD22D5E33400CFC22C /* JZTPayCenter.m in Sources */,
 				531228B122D34B8D0036E8A5 /* JZTPhotoPreviewViewController.m in Sources */,
 				53D9E998225CA5FC00029C7F /* PSHomeAPI.m in Sources */,
 				5335DA9E225B83D200183509 /* AppDelegate.m in Sources */,
@@ -1256,6 +1336,16 @@
 				PRODUCT_BUNDLE_IDENTIFIER = rainsoft.com.ELNSchool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
+				WARNING_CFLAGS = (
+					"-Wno-unused-variable",
+					"-Wno-unguarded-availability",
+					"-Wno-deprecated-declarations",
+					"-Wno-documentation",
+					"-Wno-strict-prototypes",
+					"-Wno-tautological-pointer-compare",
+					"-Wno-unreachable-code",
+					"-Wno-nullability-completeness",
+				);
 			};
 			name = Debug;
 		};
@@ -1282,6 +1372,16 @@
 				PRODUCT_BUNDLE_IDENTIFIER = rainsoft.com.ELNSchool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
+				WARNING_CFLAGS = (
+					"-Wno-unused-variable",
+					"-Wno-unguarded-availability",
+					"-Wno-deprecated-declarations",
+					"-Wno-documentation",
+					"-Wno-strict-prototypes",
+					"-Wno-tautological-pointer-compare",
+					"-Wno-unreachable-code",
+					"-Wno-nullability-completeness",
+				);
 			};
 			name = Release;
 		};

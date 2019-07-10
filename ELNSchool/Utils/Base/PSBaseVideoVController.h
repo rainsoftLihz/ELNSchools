@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(instancetype)initWith:(BOOL)autoPlay and:(NSString*)url;
 
 -(instancetype)initWith:(NSString*)url;
+
 @end
 
 NS_ASSUME_NONNULL_END

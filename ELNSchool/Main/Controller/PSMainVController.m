@@ -14,6 +14,7 @@
 #import "PSHomeTableCell1.h"
 #import "PSHomeTableCell2.h"
 #import "PSHomeTableCell3.h"
+#import "PSCourseDetailVController.h"
 @interface PSMainVController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,strong)UITableView* tableView;
@@ -143,6 +144,11 @@
     return footer;
 }
 
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    PSCourseDetailVController* vc = [PSCourseDetailVController new];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 /*
 #pragma mark - Navigation
 

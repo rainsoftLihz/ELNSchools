@@ -10,7 +10,7 @@
 #import "PSRootViewController.h"
 #import "PSPhoneController.h"
 #import "AppDelegate+Umeng.h"
-@interface AppDelegate ()
+@interface AppDelegate ()<WXApiDelegate>
 
 @end
 
@@ -108,10 +108,20 @@
     BOOL result = [[UMSocialManager defaultManager] handleOpenURL:url];
     if (!result) {
         // 其他如支付等SDK的回调
-    }else {
-        
+        if ([url.host isEqualToString:@"pay"]) {
+            return [WXApi handleOpenURL:url delegate:self];
+        }
     }
+    
     return result;
+}
+
+//微信支付回调
+- (void)onResp:(BaseResp *)resp {
+    if ([resp isKindOfClass:[PayResp class]]) {
+        // 支付返回结果，实际支付结果需要去微信服务器端查询
+        [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:WX_PAY_NOTIFICATION object:resp]];
+    }
 }
 
 @end
