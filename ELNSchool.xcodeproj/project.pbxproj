@@ -68,6 +68,8 @@
 		533805C5225C2B200060E743 /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5338052B225C2B200060E743 /* NSObject+YYModel.m */; };
 		533805C6225C2B200060E743 /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5338052C225C2B200060E743 /* YYClassInfo.m */; };
 		53380608225C2BB30060E743 /* PSMainVController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53380607225C2BB30060E743 /* PSMainVController.m */; };
+		533BB09522D6D68E00095FEB /* PSCommentTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 533BB09322D6D68E00095FEB /* PSCommentTableCell.m */; };
+		533BB09622D6D68E00095FEB /* PSCommentTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 533BB09422D6D68E00095FEB /* PSCommentTableCell.xib */; };
 		533F76C422A76CC8006DA05C /* JZTPhoneCodeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 533F76C222A76CC7006DA05C /* JZTPhoneCodeButton.m */; };
 		533F76D322A773A2006DA05C /* JZTLoginViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 533F76D222A773A2006DA05C /* JZTLoginViewCell.m */; };
 		533F76E622A7754F006DA05C /* NSDate+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 533F76D422A7754E006DA05C /* NSDate+MJ.m */; };
@@ -105,6 +107,7 @@
 		537C37BD22D5E33400CFC22C /* JZTPayCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 537C37BB22D5E33400CFC22C /* JZTPayCenter.m */; };
 		537C37C022D5E35A00CFC22C /* JZTPayResp.m in Sources */ = {isa = PBXBuildFile; fileRef = 537C37BF22D5E35900CFC22C /* JZTPayResp.m */; };
 		537C37C322D5E51500CFC22C /* PSPayApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 537C37C222D5E51500CFC22C /* PSPayApi.m */; };
+		538178BE22D82307009CFFE3 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538178BD22D82307009CFFE3 /* CoreText.framework */; };
 		53991CC422B379FB007AB52F /* LHZPlayerManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 53991CC322B379FB007AB52F /* LHZPlayerManger.m */; };
 		53991CC722B383A6007AB52F /* LHZPlayerResourceLoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 53991CC622B383A6007AB52F /* LHZPlayerResourceLoder.m */; };
 		53991CCB22B39CF5007AB52F /* LHZDownLoaderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 53991CCA22B39CF5007AB52F /* LHZDownLoaderManager.m */; };
@@ -273,6 +276,9 @@
 		53380606225C2BB30060E743 /* PSMainVController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSMainVController.h; sourceTree = "<group>"; };
 		53380607225C2BB30060E743 /* PSMainVController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSMainVController.m; sourceTree = "<group>"; };
 		5338060A225C2D4F0060E743 /* PSMacroUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSMacroUtils.h; sourceTree = "<group>"; };
+		533BB09222D6D68E00095FEB /* PSCommentTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSCommentTableCell.h; sourceTree = "<group>"; };
+		533BB09322D6D68E00095FEB /* PSCommentTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSCommentTableCell.m; sourceTree = "<group>"; };
+		533BB09422D6D68E00095FEB /* PSCommentTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PSCommentTableCell.xib; sourceTree = "<group>"; };
 		533F76C222A76CC7006DA05C /* JZTPhoneCodeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZTPhoneCodeButton.m; sourceTree = "<group>"; };
 		533F76C322A76CC8006DA05C /* JZTPhoneCodeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZTPhoneCodeButton.h; sourceTree = "<group>"; };
 		533F76D122A773A2006DA05C /* JZTLoginViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZTLoginViewCell.h; sourceTree = "<group>"; };
@@ -335,6 +341,7 @@
 		537C37BF22D5E35900CFC22C /* JZTPayResp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZTPayResp.m; sourceTree = "<group>"; };
 		537C37C122D5E51500CFC22C /* PSPayApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSPayApi.h; sourceTree = "<group>"; };
 		537C37C222D5E51500CFC22C /* PSPayApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSPayApi.m; sourceTree = "<group>"; };
+		538178BD22D82307009CFFE3 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		53991CC222B379FB007AB52F /* LHZPlayerManger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHZPlayerManger.h; sourceTree = "<group>"; };
 		53991CC322B379FB007AB52F /* LHZPlayerManger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHZPlayerManger.m; sourceTree = "<group>"; };
 		53991CC522B383A6007AB52F /* LHZPlayerResourceLoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHZPlayerResourceLoder.h; sourceTree = "<group>"; };
@@ -417,6 +424,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				538178BE22D82307009CFFE3 /* CoreText.framework in Frameworks */,
 				53E94DE522CB574A00E995B3 /* CoreGraphics.framework in Frameworks */,
 				53E94DE022CB118E00E995B3 /* SystemConfiguration.framework in Frameworks */,
 				5349A63B22C20517004AC9D6 /* libsqlite3.tbd in Frameworks */,
@@ -440,6 +448,7 @@
 		3ECA8CFB8EF5C97C52F902B1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				538178BD22D82307009CFFE3 /* CoreText.framework */,
 				53E94DE422CB574A00E995B3 /* CoreGraphics.framework */,
 				53E94DDF22CB118E00E995B3 /* SystemConfiguration.framework */,
 				5349A63A22C20517004AC9D6 /* libsqlite3.tbd */,
@@ -573,7 +582,7 @@
 				53380609225C2CF80060E743 /* Utils */,
 				53380605225C2BA00060E743 /* Main */,
 				533804F0225C28520060E743 /* Mine */,
-				533804EF225C28040060E743 /* College */,
+				533804EF225C28040060E743 /* Communication */,
 				533804EE225C27DA0060E743 /* APPStart */,
 				5335DAA5225B83D400183509 /* Assets.xcassets */,
 			);
@@ -637,7 +646,7 @@
 			path = APPStart;
 			sourceTree = "<group>";
 		};
-		533804EF225C28040060E743 /* College */ = {
+		533804EF225C28040060E743 /* Communication */ = {
 			isa = PBXGroup;
 			children = (
 				533804FD225C29FE0060E743 /* PSCollegeVController.h */,
@@ -645,7 +654,7 @@
 				53BE1D0522D48253004BFE60 /* PSSocialTableCell.h */,
 				53BE1D0622D48253004BFE60 /* PSSocialTableCell.m */,
 			);
-			path = College;
+			path = Communication;
 			sourceTree = "<group>";
 		};
 		533804F0225C28520060E743 /* Mine */ = {
@@ -843,6 +852,9 @@
 				537C37B522D5D40000CFC22C /* PSPriceInfoTableCell.h */,
 				537C37B622D5D40000CFC22C /* PSPriceInfoTableCell.m */,
 				537C37B722D5D40000CFC22C /* PSPriceInfoTableCell.xib */,
+				533BB09222D6D68E00095FEB /* PSCommentTableCell.h */,
+				533BB09322D6D68E00095FEB /* PSCommentTableCell.m */,
+				533BB09422D6D68E00095FEB /* PSCommentTableCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1019,6 +1031,7 @@
 				537C37B922D5D40000CFC22C /* PSPriceInfoTableCell.xib in Resources */,
 				5335DAA9225B83D400183509 /* LaunchScreen.storyboard in Resources */,
 				5335DAA6225B83D400183509 /* Assets.xcassets in Resources */,
+				533BB09622D6D68E00095FEB /* PSCommentTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1110,6 +1123,7 @@
 				53D105A722B09F7000B8E03F /* PSBaseVideoVController.m in Sources */,
 				5335DAAC225B83D400183509 /* main.m in Sources */,
 				534EAC39225CCD9400A3A2D6 /* UIView+Gradient.m in Sources */,
+				533BB09522D6D68E00095FEB /* PSCommentTableCell.m in Sources */,
 				53D9E98C225C9D5A00029C7F /* PSHomeFrontUserModel.m in Sources */,
 				53991CC422B379FB007AB52F /* LHZPlayerManger.m in Sources */,
 				533F770722A797D8006DA05C /* PSLoginAPI.m in Sources */,

@@ -266,9 +266,6 @@
     for (int i = 0 ; i < self.albums.count; i++) {
         HXAlbumModel *model = self.albums[i];
         model.index = i;
-//        NSPredicate *pred = [NSPredicate predicateWithFormat:@"currentAlbumIndex = %d", i];
-//        NSArray *newArray = [self.selectedList filteredArrayUsingPredicate:pred];
-//        model.selectedCount = newArray.count;
     }
     if (albums) {
         albums(self.albums);

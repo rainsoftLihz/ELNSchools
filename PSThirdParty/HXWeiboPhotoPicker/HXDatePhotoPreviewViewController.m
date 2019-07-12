@@ -61,26 +61,26 @@ HXDateVideoEditViewControllerDelegate
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deviceOrientationWillChanged:) name:UIApplicationWillChangeStatusBarOrientationNotification object:nil];
 }
-- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC{
-    if (operation == UINavigationControllerOperationPush) {
-        return [HXDatePhotoViewTransition transitionWithType:HXDatePhotoViewTransitionTypePush];
-    }else {
-        if (![fromVC isKindOfClass:[self class]]) {
-            return nil;
-        }
-        return [HXDatePhotoViewTransition transitionWithType:HXDatePhotoViewTransitionTypePop];
-    }
-}
-- (id<UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController{
-    return self.interactiveTransition.interation ? self.interactiveTransition : nil;
-}
-- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source{
-    return [HXDatePhotoViewPresentTransition transitionWithTransitionType:HXDatePhotoViewPresentTransitionTypePresent photoView:self.photoView];
-}
-
-- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed{
-    return [HXDatePhotoViewPresentTransition transitionWithTransitionType:HXDatePhotoViewPresentTransitionTypeDismiss photoView:self.photoView];
-}
+//- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC{
+//    if (operation == UINavigationControllerOperationPush) {
+//        return [HXDatePhotoViewTransition transitionWithType:HXDatePhotoViewTransitionTypePush];
+//    }else {
+//        if (![fromVC isKindOfClass:[self class]]) {
+//            return nil;
+//        }
+//        return [HXDatePhotoViewTransition transitionWithType:HXDatePhotoViewTransitionTypePop];
+//    }
+//}
+//- (id<UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController{
+//    return self.interactiveTransition.interation ? self.interactiveTransition : nil;
+//}
+//- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source{
+//    return [HXDatePhotoViewPresentTransition transitionWithTransitionType:HXDatePhotoViewPresentTransitionTypePresent photoView:self.photoView];
+//}
+//
+//- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed{
+//    return [HXDatePhotoViewPresentTransition transitionWithTransitionType:HXDatePhotoViewPresentTransitionTypeDismiss photoView:self.photoView];
+//}
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     if (self.orientationDidChange) {

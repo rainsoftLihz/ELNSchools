@@ -11,6 +11,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface PSSocialTableCell : UITableViewCell
+@property (copy, nonatomic) void (^photoViewChangeHeightBlock)(UITableViewCell *myCell, CGFloat photoViewHegith);
+
++(NSString*)cellID;
+
++(PSSocialTableCell*)cellWithTable:(UITableView*)tableView;
 
 @end
 

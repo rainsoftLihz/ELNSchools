@@ -47,6 +47,36 @@
     }
     self.collectionView.backgroundColor = [UIColor blackColor];
     self.bottomView.hidden = YES;
+    
+    UIView *navBgView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, KScreenWidth, kNavBarAndStatusBarHeight)];
+    UIView *contentView = [[UIView alloc]init];
+    navBgView.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:navBgView];
+    [navBgView addSubview:contentView];
+    [contentView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.bottom.right.equalTo(navBgView);
+        make.height.mas_equalTo(kNavigationBarHeight);
+    }];
+    
+    _jzt_titleLabel = [[UILabel alloc]init];
+    _jzt_titleLabel.font = [UIFont systemFontOfSize:20];
+    _jzt_titleLabel.textColor = [UIColor whiteColor];
+    _jzt_titleLabel.textAlignment = NSTextAlignmentCenter;
+    [self refershTitle];
+    [contentView addSubview:_jzt_titleLabel];
+    [_jzt_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.equalTo(contentView);
+    }];
+    
+    UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [backBtn setImage:[UIImage imageNamed:@"scan_back"] forState:UIControlStateNormal];
+    [backBtn addTarget:self action:@selector(dismiss) forControlEvents:UIControlEventTouchUpInside];
+    [contentView addSubview:backBtn];
+    [backBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(contentView);
+        make.left.equalTo(contentView).offset(Adapt_scaleL(12));
+    }];
+    [self setNeedsStatusBarAppearanceUpdate];
 }
 
 - (void)addLocalImage:(NSArray<UIImage *> *)images{
@@ -66,7 +96,7 @@
 }
 
 - (void)refershTitle{
-    self.title = [NSString stringWithFormat:@"%d/%d", self.currentModelIndex+1, self.manager.afterSelectedArray.count];
+    self.jzt_titleLabel.text = [NSString stringWithFormat:@"%ld/%ld", self.currentModelIndex+1, self.manager.afterSelectedArray.count];
 }
 
 - (void)dismiss{
@@ -92,20 +122,20 @@
 - (void)setSubviewAlphaAnimate:(BOOL)animete {
     [self dismiss];
 }
-
-- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
-    if (self.photoView) {
-        return [super animationControllerForDismissedController:dismissed];
-    }
-    return [[JZTPhotoPreviewTransition alloc]initWithFromView:self.fromView];
-}
-
-- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
-    if (self.photoView) {
-        return [super animationControllerForPresentedController:presented presentingController:presenting sourceController:source];
-    }
-    return [[JZTPhotoPreviewTransition alloc]initWithFromView:self.fromView];
-}
+//
+//- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
+//    if (self.photoView) {
+//        return [super animationControllerForDismissedController:dismissed];
+//    }
+//    return [[JZTPhotoPreviewTransition alloc]initWithFromView:self.fromView];
+//}
+//
+//- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
+//    if (self.photoView) {
+//        return [super animationControllerForPresentedController:presented presentingController:presenting sourceController:source];
+//    }
+//    return [[JZTPhotoPreviewTransition alloc]initWithFromView:self.fromView];
+//}
 
 @end
 

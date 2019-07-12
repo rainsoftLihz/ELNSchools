@@ -59,21 +59,18 @@ static NSString *HXPhotoSubViewCellId = @"photoSubViewCellId";
     if (!_addModel) {
         _addModel = [[HXPhotoModel alloc] init];
         _addModel.type = HXPhotoModelMediaTypeCamera;
-//        if (self.manager.UIManager.photoViewAddImageName) {
-//            _addModel.thumbPhoto = [HXPhotoTools hx_imageNamed:self.manager.UIManager.photoViewAddImageName];
-//        }else {
+
         CGSize size = CGSizeMake(60, 60);
         UIGraphicsBeginImageContextWithOptions(size, YES, 0);
         CGContextRef context = UIGraphicsGetCurrentContext();
         CGContextSetFillColorWithColor(context, UIColorFromRGB(0xf6f6f6).CGColor);
         CGContextFillRect(context, CGRectMake(0, 0, 60, 60));
-        UIImage *addpic = [UIImage imageNamed:@"addpic"];
+        UIImage *addpic = [UIImage imageNamed:@"addPhoto"];
         [addpic drawAtPoint:CGPointMake(30-addpic.size.width/2., 30-addpic.size.height/2.)];
         UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
         
         _addModel.thumbPhoto = image;
-//        }
     }
     return _addModel;
 }
@@ -115,15 +112,6 @@ static NSString *HXPhotoSubViewCellId = @"photoSubViewCellId";
     }
     return self;
 }
-
-/**  不要使用 "initWithFrame" 这个方法初始化  */
-//- (instancetype)initWithFrame:(CGRect)frame {
-//    self = [super initWithFrame:frame];
-//    if (self) {
-//        [self setup];
-//    }
-//    return self;
-//}
 
 - (void)deleteAddBtn {
     [self.dataList removeObject:self.addModel];
@@ -216,13 +204,8 @@ static NSString *HXPhotoSubViewCellId = @"photoSubViewCellId";
         vc.modelArray = [NSMutableArray arrayWithArray:self.manager.afterSelectedArray];
         vc.currentModelIndex = [self.manager.afterSelectedArray indexOfObject:model];
         vc.photoView = self;
-        
-//            UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-//            nav.transitioningDelegate = vc;
-//            nav.modalPresentationStyle = UIModalPresentationCustom;
-//        [[self viewController] presentViewController:nav animated:YES completion:nil];
+    
         [[self viewController] presentViewController:vc animated:YES completion:nil];
-//        [[self viewController] showViewController:vc sender:nil];
     }
 }
 
@@ -255,7 +238,6 @@ static NSString *HXPhotoSubViewCellId = @"photoSubViewCellId";
  */
 - (void)goPhotoViewController {
     if (self.outerCamera) {
-//        self.manager.openCamera = NO;
             if (self.manager.type == HXPhotoManagerSelectedTypePhoto) {
                 self.manager.configuration.maxNum = self.manager.configuration.photoMaxNum;
             }else if (self.manager.type == HXPhotoManagerSelectedTypeVideo) {
@@ -277,9 +259,6 @@ static NSString *HXPhotoSubViewCellId = @"photoSubViewCellId";
         
         [alertController addAction:[UIAlertAction actionWithTitle:[NSBundle hx_localizedStringForKey:@"取消"] style:UIAlertActionStyleCancel handler:nil]];
         [self.viewController presentViewController:alertController animated:YES completion:nil];
-//        UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:[NSBundle hx_localizedStringForKey:@"取消"] destructiveButtonTitle:nil otherButtonTitles:[NSBundle hx_localizedStringForKey:@"相机"],[NSBundle hx_localizedStringForKey:@"相册"], nil];
-//
-//        [sheet showInView:self];
         return;
     }
     [self directGoPhotoViewController];
@@ -546,11 +525,7 @@ static NSString *HXPhotoSubViewCellId = @"photoSubViewCellId";
     HXPhotoModel *fromModel = self.dataList[fromIndexPath.item];
     HXPhotoModel *toModel = self.dataList[toIndexPath.item];
     [self.manager afterSelectedArraySwapPlacesWithFromModel:fromModel fromIndex:fromIndexPath.item toModel:toModel toIndex:toIndexPath.item];
-    
-//    [self.manager.endSelectedList removeObject:toModel];
-//    [self.manager.endSelectedList insertObject:toModel atIndex:toIndexPath.item];
-//    [self.manager.endSelectedList removeObject:fromModel];
-//    [self.manager.endSelectedList insertObject:fromModel atIndex:fromIndexPath.item];
+ 
     [self.photos removeAllObjects];
     [self.videos removeAllObjects];
     NSInteger i = 0;

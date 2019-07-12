@@ -23,7 +23,6 @@
      PSKCBTableCell* cell = [tableView dequeueReusableCellWithIdentifier:[PSKCBTableCell cellID]];
     if (!cell) {
         cell = [[PSKCBTableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:[PSKCBTableCell cellID]];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     return cell;
 }
@@ -31,6 +30,7 @@
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         [self configUI];
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     return self;
 }

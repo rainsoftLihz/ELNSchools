@@ -12,6 +12,7 @@
 #import "PSBuyToolView.h"
 #import "PSKCBTableCell.h"
 #import "PSShowBuyVController.h"
+#import "PSCommentTableCell.h"
 @interface PSCourseDetailVController ()<UIScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong) HMSegmentedControl* segmentController;
 @property(nonatomic,strong) UIScrollView* scrollView;
@@ -74,6 +75,9 @@
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    if ([scrollView isKindOfClass:[UITableView class]]) {
+        return;
+    }
     CGFloat offset = scrollView.contentOffset.x;
     NSInteger index = offset/KScreenWidth;
     [self.segmentController setSelectedSegmentIndex:index animated:YES];;
@@ -105,7 +109,14 @@
         table.delegate = self;
         table.dataSource = self;
         [self.scrollView addSubview:table];
-        [table registerClass:[PSKCBTableCell class] forCellReuseIdentifier:[PSKCBTableCell cellID]];
+        
+        if (i == 0) {
+            [table registerClass:[PSKCBTableCell class] forCellReuseIdentifier:[PSKCBTableCell cellID]];
+        }else {
+            
+            [table registerNib:[UINib nibWithNibName:@"PSCommentTableCell" bundle:nil] forCellReuseIdentifier:[PSCommentTableCell cellID]];
+            table.estimatedRowHeight = 75;
+        }
         [tabArr addObject:table];
     }
     
@@ -115,7 +126,12 @@
 
 #pragma mark --- table delegate
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    PSKCBTableCell* cell = [PSKCBTableCell cellWithTable:tableView];
+    if (tableView == self.tableArr[0]) {
+        PSKCBTableCell* cell = [PSKCBTableCell cellWithTable:tableView];
+        return cell;
+    }
+    
+    PSCommentTableCell* cell = [PSCommentTableCell cellWithTable:tableView];
     return cell;
 }
 
@@ -124,6 +140,9 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (tableView == self.tableArr[1]) {
+        return UITableViewAutomaticDimension;
+    }
     return 85;
 }
 
