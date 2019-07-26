@@ -21,7 +21,7 @@
     self.view.backgroundColor = UIColorFromRGB(0xf6f6f6);
     
     /* 坐标系从navigationBar开始 */
-    self.navigationController.navigationBar.translucent = YES;
+    self.navigationController.navigationBar.translucent = NO;
     
 }
 

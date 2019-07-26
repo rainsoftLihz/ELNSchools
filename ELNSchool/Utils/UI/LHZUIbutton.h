@@ -17,11 +17,16 @@ typedef NS_ENUM(NSInteger,BTNType) {
     BTNTypeTitleRight,
 };
 
-@interface LHZUIbutton : UIView
+
+@interface LHZUIbutton : UIControl
 
 @property(nonatomic,strong) NSString* title;
 
 @property(nonatomic,strong) UIImage* image;
+
+@property(nonatomic,assign) CGFloat space;
+
+-(instancetype)initWith:(UIImage*)image and:(NSString*)title;
 
 @end
 

@@ -36,7 +36,7 @@
 #pragma mark  --- 视频播放
 -(void)addVideoController{
     PSBaseVideoVController* bvc = [[PSBaseVideoVController alloc] initWith:NO and:@"https://www.apple.com/105/media/us/iphone-x/2017/01df5b43-28e4-4848-bf20-490c34a926a7/films/feature/iphone-x-feature-tpl-cc-us-20170912_1280x720h.mp4"];
-    bvc.view.frame = self.view.bounds;
+    bvc.view.frame = CGRectMake(0, 0, KScreenWidth, KScreenHeight-kNavBarAndStatusBarHeight);
     [self.view addSubview:bvc.view];
     [self addChildViewController:bvc];
 }
@@ -44,7 +44,7 @@
 #pragma mark --- 分段控制器
 -(void)addSegmentController{
     HMSegmentedControl* controller = [[HMSegmentedControl alloc] initWithSectionTitles:@[@"课程介绍",@"课程表",@"交流区"]];
-    controller.frame = CGRectMake(0, KScreenWidth*9/16+kNavBarAndStatusBarHeight, KScreenWidth, 44.0);
+    controller.frame = CGRectMake(0, KScreenWidth*9/16, KScreenWidth, 44.0);
     controller.selectionIndicatorLocation = HMSegmentedControlSelectionIndicatorLocationDown;
     controller.selectionIndicatorHeight = 2.5;
     controller.selectionIndicatorColor = UIColor.redColor;
@@ -66,8 +66,11 @@
 -(UIScrollView *)scrollView{
     if (!_scrollView) {
         CGFloat y = CGRectGetMaxY(self.segmentController.frame);
-        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0,y, KScreenWidth, KScreenHeight - y)];
+        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0,y, KScreenWidth, KScreenHeight - y - 44.0 - kNavBarAndStatusBarHeight)];
         _scrollView.contentSize = CGSizeMake(3*KScreenWidth, KScreenHeight - y);
+        _scrollView.alwaysBounceHorizontal = YES;
+        _scrollView.alwaysBounceVertical = NO;
+        _scrollView.directionalLockEnabled = YES;
         _scrollView.delegate = self;
         _scrollView.pagingEnabled = YES;
     }
@@ -86,7 +89,7 @@
 #pragma mark --- 购买
 -(void)addToolBar{
     kWeakSelf;
-    PSBuyToolView* buyView = [[PSBuyToolView alloc] initWithFrame:CGRectMake(0, KScreenHeight-44.0, KScreenWidth, 44.0) andShowBuyAction:^{
+    PSBuyToolView* buyView = [[PSBuyToolView alloc] initWithFrame:CGRectMake(0, KScreenHeight-44.0-kNavBarAndStatusBarHeight, KScreenWidth, 44.0) andShowBuyAction:^{
         [wkSelf showBuy];
     }];
     [self.view addSubview:buyView];
@@ -105,9 +108,10 @@
 
     NSMutableArray* tabArr = [NSMutableArray arrayWithCapacity:2];
     for (int i = 0; i < 2; i++) {
-        UITableView* table = [[UITableView alloc] initWithFrame:CGRectMake(KScreenWidth*(i+1), 0, KScreenWidth, self.scrollView.height) style:UITableViewStylePlain];
+        UITableView* table = [[UITableView alloc] initWithFrame:CGRectMake(KScreenWidth*(i+1), 0, KScreenWidth, KScreenHeight-kNavBarAndStatusBarHeight-44.0-CGRectGetMaxY(self.segmentController.frame)) style:UITableViewStylePlain];
         table.delegate = self;
         table.dataSource = self;
+        
         [self.scrollView addSubview:table];
         
         if (i == 0) {

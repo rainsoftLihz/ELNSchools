@@ -540,20 +540,6 @@ static NSString *HXPhotoSubViewCellId = @"photoSubViewCellId";
     }
     [self.manager setAfterSelectedPhotoArray:self.photos];
     [self.manager setAfterSelectedVideoArray:self.videos];
-//    int i = 0, j = 0, k = 0;
-//    for (HXPhotoModel *model in self.manager.endSelectedList) {
-//        model.selectIndexStr = [NSString stringWithFormat:@"%d",k + 1];
-//        if ((model.type == HXPhotoModelMediaTypePhoto || model.type == HXPhotoModelMediaTypePhotoGif) || (model.type == HXPhotoModelMediaTypeCameraPhoto || model.type == HXPhotoModelMediaTypeLivePhoto)) {
-//            model.endIndex = i++;
-//            [self.photos addObject:model];
-//        }else if (model.type == HXPhotoModelMediaTypeVideo || model.type == HXPhotoModelMediaTypeCameraVideo) {
-//            model.endIndex = j++;
-//            [self.videos addObject:model];
-//        }
-//        model.endCollectionIndex = k++;
-//    }
-//    self.manager.endSelectedPhotos = [NSMutableArray arrayWithArray:self.photos];
-//    self.manager.endSelectedVideos = [NSMutableArray arrayWithArray:self.videos];
 }
 
 - (void)dragCellCollectionViewCellEndMoving:(HXCollectionView *)collectionView {

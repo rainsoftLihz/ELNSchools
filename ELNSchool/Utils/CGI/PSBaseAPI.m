@@ -214,4 +214,38 @@
     return  downloadTask;
 }
 
+
+/**
+ 上传多张图片
+ */
++ (NSURLSessionDataTask*)upload:(NSString *)url param:(NSDictionary *)param images:(NSArray *)images success:(PSCGISuccessBlock)success failure:(PSCGIFaileBlock)failure {
+    
+    AFHTTPSessionManager *manager ;
+    
+    if ([url containsString:@"http:"] || [url containsString:@"https:"]) {
+        manager = [AFHTTPSessionManager manager];
+    }else {
+        manager = [[AFHTTPSessionManager manager] initWithBaseURL:[NSURL URLWithString:kApi_Base_Url]];
+    }
+    
+    return [manager POST:url parameters:[self appendGlobalParams:param] constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        
+        for (int i = 0; i < images.count; i ++)
+        {
+            UIImage *image = images[i];
+            NSData *data = UIImageJPEGRepresentation(image, 0.5);
+            [formData appendPartWithFileData:data name:[NSString stringWithFormat:@"uploadFile%d",i] fileName:[NSString stringWithFormat:@"uploadFile%d.jpg", i] mimeType:@"image/jpg"];
+        }
+        
+    } progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        PSRsponse *response = [PSRsponse modelWithDictionary:responseObject];
+        success(task,response);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        failure(task,error);
+    }];
+    
+}
+
 @end

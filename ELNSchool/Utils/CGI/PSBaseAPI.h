@@ -61,6 +61,10 @@ NS_ASSUME_NONNULL_BEGIN
  */
 +(NSURLSessionDownloadTask*)downLoadFile:(NSString*)fileUrl complet:(PScompletionHandler)handeler;
 
+/**
+ 上传多张图片
+ */
++ (NSURLSessionDataTask*)upload:(NSString *)url param:(NSDictionary *)param images:(NSArray *)images success:(PSCGISuccessBlock)success failure:(PSCGIFaileBlock)failure;
 @end
 
 NS_ASSUME_NONNULL_END
